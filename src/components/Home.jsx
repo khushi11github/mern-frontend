@@ -49,7 +49,7 @@ import { useState } from "react";
 // }
 
 
-export default function Home({age}) {
+export default function Home() {
 
   const [runs,setrun]=useState(0);
   const[wicket,setwicket]=useState(0);
