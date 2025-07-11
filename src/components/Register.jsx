@@ -11,8 +11,8 @@ const Register = () => {
     e.preventDefault();
     try {
       // const url = "http://localhost:8080/api/users/register";
-      const url = "https://mern-backend-1.onrender.com/api/users/register";
-      
+      const url = `$(API_URL)/api/users/register`;
+
       const response = await axios.post(url, user);
       console.log(response);
 
