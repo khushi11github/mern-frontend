@@ -10,8 +10,8 @@ const Register = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      // const url = "http://localhost:8080/api/users/register";
-      const url = `$(API_URL)/api/users/register`;
+// const url = "http://localhost:8080/api/users/register";
+const url = `${import.meta.env.VITE_API_URL}/api/users/register`;
 
       const response = await axios.post(url, user);
       console.log(response);
