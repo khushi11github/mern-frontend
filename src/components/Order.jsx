@@ -58,13 +58,13 @@ export default function Order() {
               </tbody>
             </table>
 
-            { order.status === "pending" ?( 
+            { order.status === "Pending" ?( 
                <button className="order-payment-btn">
                  Payment
                </button> 
             ):( 
               <button className="order-payment-btn">
-                Payment Completed
+                Completed
               </button>
             )}
            
