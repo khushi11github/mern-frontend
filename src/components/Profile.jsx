@@ -48,20 +48,24 @@ export default function Profile() {
   <input
     type="text"
     value={profile.firstName}
+    placeholder="Enter your first Name"
     onChange={(e) => setProfile({ ...profile, firstName: e.target.value })}
   />
   <input
     type="text"
+    placeholder="Enter your last name"
     value={profile.lastName}
     onChange={(e) => setProfile({ ...profile, lastName: e.target.value })}
   />
   <input
+  placeholder="Enter your email id"
     type="email"
     value={profile.email}
     onChange={(e) => setProfile({ ...profile, email: e.target.value })}
   />
   <input
     type="password"
+    placeholder="Enter your password"
     value={profile.password}
     onChange={(e) => setProfile({ ...profile, password: e.target.value })}
   />
