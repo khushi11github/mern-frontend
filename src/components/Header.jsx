@@ -18,16 +18,14 @@ export default function Header() {
         {
           user?.role === "admin" && <Link to="/admin">Admin</Link>
         } 
-        {/* <Link to="/admin">Admin</Link>  */}
         <Link to="/order">MyOrder</Link>
 
         {
-          user.name!=null && <Link to="/logout">Logout</Link>
+          user?.token && <Link to="/logout">Logout</Link>
         }
 
         {user?.token ? (
           <Link to="/profile">Profile</Link>
-      
         ) : (
           <Link to="/login">Login</Link>
         )}
