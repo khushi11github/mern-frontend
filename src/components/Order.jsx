@@ -57,6 +57,9 @@ export default function Order() {
                 ))}
               </tbody>
             </table>
+            <button> 
+              Proceed to Payment
+            </button>
           </div>
         ))}
     </div>
