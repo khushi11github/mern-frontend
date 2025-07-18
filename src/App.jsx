@@ -15,6 +15,7 @@ import Login from "./components/Login";
 import Products from "./components/Products";
 import { BrowserRouter, Route, Routes, Link } from "react-router-dom";
 import "./App.css";
+import Logout from "./components/Logout";
 export const AppContext = createContext();
 function App() {
   const [cart, setCart] = useState([]);
@@ -32,6 +33,8 @@ function App() {
             <Route path="cart" element={<Cart />} />
             <Route path="order" element={<Order />} />
             <Route path="admin" element={<Admin />}>
+            <Route path="logout" element={<Logout />} />
+  
               <Route index element={<Users />} />
               <Route path="products" element={<Products />} />
               <Route path="orders" element={<Orders />} />

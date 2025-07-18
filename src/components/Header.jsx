@@ -7,6 +7,7 @@ import "./Header.css";
 export default function Header() {
   const { user } = useContext(AppContext);
 
+
   return (
     <div className="header">
       <h1>MERN Frontend</h1>
@@ -20,8 +21,13 @@ export default function Header() {
         {/* <Link to="/admin">Admin</Link>  */}
         <Link to="/order">MyOrder</Link>
 
+        {
+          user && <Link to="/logout">Logout</Link>
+        }
+
         {user?.token ? (
           <Link to="/profile">Profile</Link>
+      
         ) : (
           <Link to="/login">Login</Link>
         )}
