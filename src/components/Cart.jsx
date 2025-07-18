@@ -84,7 +84,7 @@ export default function Cart() {
         )
     )}
   <div className="order-summary">Order Value: ₹{orderValue}</div>
-  {user?.token ? (
+  {user?.token && orderValue > 0 ? (
     <button className="order-btn" onClick={placeOrder}>
       Place Order
     </button>
