@@ -21,6 +21,24 @@ export default function Profile() {
   useEffect(() => {
     fetchProfile();
   }, []);
+
+
+  const handleSubmit = async(e)=>{
+    e.preventDefault();
+    try{
+      const url = `${API_URL}/api/users/${user.id}/profile`;
+      const result = await axios.patch(url, profile);
+      setError("Profile Updated Successfully");
+      console.log(result.data);
+      fetchProfile();
+
+      
+
+    }catch(err){
+      console.log(err);
+      setError("Something went wrong");
+    }
+  }
   return (
     <div className="profile-container" >
   
