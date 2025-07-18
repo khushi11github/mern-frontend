@@ -59,27 +59,13 @@ export default function Order() {
             </table>
 
             { order.status === "pending" ?( 
-               <button style={{
-              backgroundColor: "#694592ff",
-              color: "#fff",
-              border: "none",
-              padding: "10px 20px",
-            }}> 
-            Payment
-            </button> 
-              
-            
-            
+               <button className="order-payment-btn">
+                 Payment
+               </button> 
             ):( 
-              <button style={{
-                backgroundColor: "#694592ff",
-                color: "#fff",
-                border: "none",
-                padding: "10px 20px",
-              }} disabled>
+              <button className="order-payment-btn">
                 Payment Completed
               </button>
-
             )}
            
           </div>
