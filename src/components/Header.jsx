@@ -13,6 +13,8 @@ export default function Header() {
       <div className="nav-links">
         <Link to="/">Home</Link>
         <Link to="/cart">MyCart</Link>
+        {user.role}
+        
         {
           user?.role === "admin" && <Link to="/admin">Admin</Link>
         }
