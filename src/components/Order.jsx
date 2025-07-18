@@ -57,14 +57,31 @@ export default function Order() {
                 ))}
               </tbody>
             </table>
-            <button style={{
+
+            { order.status === "pending" ?( 
+               <button style={{
               backgroundColor: "#694592ff",
               color: "#fff",
               border: "none",
               padding: "10px 20px",
             }}> 
             Payment
-            </button>
+            </button> 
+              
+            
+            
+            ):( 
+              <button style={{
+                backgroundColor: "#694592ff",
+                color: "#fff",
+                border: "none",
+                padding: "10px 20px",
+              }} disabled>
+                Payment Completed
+              </button>
+
+            )}
+           
           </div>
         ))}
     </div>
