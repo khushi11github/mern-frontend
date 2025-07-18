@@ -14,7 +14,7 @@ export default function Header() {
         <Link to="/">Home</Link>
         <Link to="/cart">MyCart</Link>
         <Link to="/order">MyOrder</Link>
-        {user?.role === "admin" && <Link to="/admin">Admin</Link>}
+        <Link to="/admin">Admin</Link>
         {user?.token ? (
           <Link to="/profile">Profile</Link>
         ) : (
