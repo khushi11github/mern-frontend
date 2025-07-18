@@ -13,14 +13,11 @@ export default function Header() {
       <div className="nav-links">
         <Link to="/">Home</Link>
         <Link to="/cart">MyCart</Link>
-        {/* <h1>user role</h1>
-        <h1>{user.role}</h1>
-        */}
-{/* 
+       
         {
           user?.role === "admin" && <Link to="/admin">Admin</Link>
-        } */}
-        <Link to="/admin">Admin</Link>
+        } 
+        {/* <Link to="/admin">Admin</Link>  */}
         <Link to="/order">MyOrder</Link>
 
         {user?.token ? (
