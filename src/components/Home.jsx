@@ -1,89 +1,60 @@
-// function Home({age}){
-//   if(age >10) return <h2> Welcome</h2>
-//   else return <h2> You are not allowed</h2>
+// export default function Home({ age }) {
+//   return age > 18 && <h2>Welcome</h2>;
 // }
 
-// export default Home;
-// function Home({age}){
-//   return age > 10 ? <h2>Welcome</h2> : <h2>You are not allowed</h2>;
+// export default function Home({ age }) {
+//   return age > 18 ? <h2>Welcome</h2> : <h2>Not allowed</h2>;
 // }
-// export default Home;
 
-// export default function Home({age}) {
-//   const handleClick = ()=>{
-//     alert('hello');
-//   }
-
-
-//    const handleSubmit = (name)=>{
-//    alert(`hello ${name}`);
-//   }
-//   return (
-//     <>
-//       <h1>Hello world</h1>
-//       <button onClick={handleClick}>click</button>
-//       <button onClick={()=>handleSubmit('John')}>Submit</button>
-//     </>
-//   );
+// export default function Home({ age }) {
+//   if (age > 18) return <h2>Welcome</h2>;
+//   else return <h2>Not allowed</h2>;
 // }
-import { useState } from "react";
 
-// export default function Home({age}) {
-
-//   const [score,setscore] = useState(0);
-
-//   const handleIncrement = () => {
-//     setscore((prev) => prev + 1);  
-//   }
-// const decrement = () => {
-//     setscore((prev) => prev - 1);
+// export default function Home({ age }) {
+//   const handleClick = () => {
+//     alert("Hello");
 //   };
-
+//   const handleSubmit = (name) => {
+//     alert(`Hello ${name}`);
+//   };
 //   return (
 //     <>
-//       <p>{score}</p>
-//       <button onClick={handleIncrement}>Increment</button>
-//       <button onClick={decrement}>Decrement</button>
+//       <h2>Hello World</h2>
+//       <button onClick={handleClick}>Click</button>
+//       <button onClick={() => handleSubmit("John")}>Submit</button>
 //     </>
 //   );
 // }
 
-
+import { useState } from "react";
 export default function Home() {
-
-  const [runs,setrun]=useState(0);
-  const[wicket,setwicket]=useState(0);
-  const [message, setMessage] = useState("");
-
-
-  const handleRun = () => {
-    if(wicket<10) {
-    setrun((prev) => prev + 1);}
-    setMessage("Well Done!");  
-  }
-const handlewicket = () => {
-  if (wicket <10) {
-    setwicket((prev) => prev + 1);
-    setMessage("better luck next time");
-    
-  }else{
-    setMessage("game over");
-  }
+  const [wicket, setWicket] = useState(0);
+  const [run, setRun] = useState(0);
+  const [message, setMessage] = useState();
+  const incrementRun = () => {
+    if (wicket < 10) {
+      setRun(run + 1);
+      setMessage("Well Done");
+    }
+  };
+  const incrementWicket = () => {
+    if (wicket < 10) {
+      setWicket(wicket + 1);
+      setMessage("Better Luck Next Time");
+    } else {
+      setMessage("Game Over");
+    }
   };
 
   return (
     <>
-  
-      <button onClick={handleRun}>Run</button><br></br>
-
-      <p>{runs}</p>
-      <button onClick={handlewicket}>Wicket</button>
-      <p>{wicket}</p>
-
-      <div>{message}</div>
-
-  
-
+      <button onClick={incrementRun}>Run</button>
+      <h3>{run}</h3>
+      <button onClick={incrementWicket}>Wicket</button>
+      <h3>{wicket}</h3>
+      <hr />
+      {message}
     </>
   );
 }

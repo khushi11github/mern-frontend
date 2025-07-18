@@ -1,0 +1,51 @@
+.profile-container{
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    justify-content: center;
+    height: 100vh;
+    align-items: center;
+    background-color: rgb(251, 251, 251);
+   
+}
+.profile-container input{
+    width: 420x;
+    height: 50px;
+    padding: 20px;
+}
+
+.profile-container button{
+    width: 200px;
+    height: 50px;
+    background-color: #2f1541;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+
+
+.profile-container h3 {
+    color: #270d75;
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+.profile-container p {
+    margin: 0.5rem 0;
+    padding-left: 30px;
+}
+
+
+.profile-container form{
+
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    width: 100%;
+    padding: 2rem;
+    border-radius: 30px;
+    
+    max-width: 500px;
+    background-color: #e0cdef;
+}
