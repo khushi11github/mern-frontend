@@ -22,7 +22,7 @@ export default function Header() {
         <Link to="/order">MyOrder</Link>
 
         {
-          user && <Link to="/logout">Logout</Link>
+          user.name!=null && <Link to="/logout">Logout</Link>
         }
 
         {user?.token ? (
