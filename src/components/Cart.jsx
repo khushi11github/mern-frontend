@@ -84,10 +84,16 @@ export default function Cart() {
         )
     )}
   <div className="order-summary">Order Value: ₹{orderValue}</div>
-  {user?.token && orderValue > 0 ? (
-    <button className="order-btn" onClick={placeOrder}>
-      Place Order
-    </button>
+  {user?.token ? (
+    orderValue > 0 ? (
+      <button className="order-btn" onClick={placeOrder}>
+        Place Order
+      </button>
+    ) : (
+      <button className="order-btn" disabled>
+        Cart is Empty
+      </button>
+    )
   ) : (
     <button className="order-btn" onClick={() => Navigate("/login")}>
       Login to Order
