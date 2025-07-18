@@ -26,21 +26,30 @@ export default function Profile() {
   
       <h3>My Profile</h3>
 
-     <form>
-      <p>
-        <input type="text" placeholder="Enter your First Name" defaultValue={profile.firstName} />
-      </p>
-      <p>
-        <input type="text" placeholder="Enter Your last name" defaultValue={profile.lastName} />
-      </p>
-      <p>
-        <input type="text" placeholder="Enter Your Email" defaultValue={profile.email} />
-      </p>
-      <p>
-        <input type="password" placeholder="Enter Your Password" defaultValue={profile.password} />
-      </p>
-      <button>Update Profile</button>
-       </form>
+    <form onSubmit={handleSubmit}>
+  <input
+    type="text"
+    value={profile.firstName}
+    onChange={(e) => setProfile({ ...profile, firstName: e.target.value })}
+  />
+  <input
+    type="text"
+    value={profile.lastName}
+    onChange={(e) => setProfile({ ...profile, lastName: e.target.value })}
+  />
+  <input
+    type="email"
+    value={profile.email}
+    onChange={(e) => setProfile({ ...profile, email: e.target.value })}
+  />
+  <input
+    type="password"
+    value={profile.password}
+    onChange={(e) => setProfile({ ...profile, password: e.target.value })}
+  />
+  <button type="submit">Update Profile</button>
+</form>
+
 
     </div>
   );
