@@ -12,6 +12,7 @@ import Header from "./components/Header";
 import Profile from "./components/Profile";
 import Footer from "./components/Footer";
 import Login from "./components/Login";
+
 import Products from "./components/Products";
 import { BrowserRouter, Route, Routes, Link } from "react-router-dom";
 import "./App.css";
@@ -28,13 +29,12 @@ function App() {
           <Routes>
             <Route index element={<Product />} />
             <Route path="login" element={<Login />} />
+             <Route path="logout" element={<Logout />} />
              <Route path="profile" element={<Profile />} />
             <Route path="register" element={<Register />} />
             <Route path="cart" element={<Cart />} />
             <Route path="order" element={<Order />} />
             <Route path="admin" element={<Admin />}>
-            <Route path="logout" element={<Logout />} />
-  
               <Route index element={<Users />} />
               <Route path="products" element={<Products />} />
               <Route path="orders" element={<Orders />} />

@@ -15,9 +15,14 @@ export default function Logout() {
   
     setUser(null);
 
-   
+   console.log("navigating")
     navigate("/login");
   }, []);
 
-  return null;
+  return( 
+    <>
+    <h1>Logout</h1>
+    </>
+
+  );
 }
