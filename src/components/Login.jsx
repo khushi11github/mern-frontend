@@ -67,18 +67,25 @@ const Login = () => {
   const navigate = useNavigate();
   const API_URL = import.meta.env.VITE_API_URL;
 
-  const handleSubmit = async () => {
-    try {
-      const url = `${API_URL}/api/users/login`;
-      const result = await axios.post(url, { email, password });
-      setUser(result.data); // Store user context
-      localStorage.setItem("token", result.data.token); // Store token
-      navigate("/");
-    } catch (err) {
-      console.log(err);
-      setError(err?.response?.data?.message || "Something went wrong");
-    }
-  };
+ const handleSubmit = async (e) => {
+  e.preventDefault();
+  console.log("Login Submit Triggered");
+
+  try {
+    const url = `${API_URL}/api/users/login`;
+    const result = await axios.post(url, { email, password });
+    console.log("Login success", result.data);
+    
+    setUser(result.data);
+    localStorage.setItem("token", result.data.token);
+
+    navigate("/");
+    console.log("Navigated to /");
+  } catch (err) {
+    console.error("Login error", err);
+    setError(err?.response?.data?.message || "Something went wrong");
+  }
+};
 
   return (
     <div className="parent">
