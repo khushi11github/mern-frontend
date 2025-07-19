@@ -2,7 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import { useContext } from "react";
 import { AppContext } from "../App";
-import { FaUserCircle,FaHome ,FaSignInAlt, FaSignOutAlt, FaShoppingCart,FaUserShiel } from "react-icons/fa";
+import { FaUserCircle,FaHome ,FaSignInAlt, FaSignOutAlt, FaShoppingCart,FaUserShield } from "react-icons/fa";
 import "./Header.css";
 
 export default function Header() {
@@ -21,7 +21,7 @@ export default function Header() {
 
        
         {
-          user?.role === "admin" && <Link to="/admin"><FaUserShiel/>Admin</Link>
+          user?.role === "admin" && <Link to="/admin"><FaUserShield/>Admin</Link>
         } 
         <Link to="/order">MyOrder</Link>
 
