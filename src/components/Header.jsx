@@ -2,6 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import { useContext } from "react";
 import { AppContext } from "../App";
+import { FaUserCircle } from "react-icons/fa";
 import "./Header.css";
 
 export default function Header() {
