@@ -11,7 +11,7 @@ export default function Header() {
 
   return (
     <div className="header">
-      <h1>MERN Frontend</h1>
+      <h1><i>Wick & Whim</i></h1>
       <div className="nav-links">
         <Link to="/">Home</Link>
         <Link to="/cart">MyCart</Link>
