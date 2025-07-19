@@ -2,7 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import { useContext } from "react";
 import { AppContext } from "../App";
-import { FaUserCircle,FaHome } from "react-icons/fa";
+import { FaUserCircle,FaHome ,FaSignInAlt, FaSignOutAlt, FaShoppingCart,FaUserShiel } from "react-icons/fa";
 import "./Header.css";
 
 export default function Header() {
@@ -14,21 +14,21 @@ export default function Header() {
       <h1><i>Wick & Whim</i></h1>
       <div className="nav-links">
         <Link to="/"><FaHome/>Home</Link>
-        <Link to="/cart">MyCart</Link>
+        <Link to="/cart"><FaShoppingCart />MyCart</Link>
         {
-          user?.token && <Link to="/logout">Logout</Link>
+          user?.token && <Link to="/logout"> <FaSignOutAlt/>Logout</Link>
         }
 
        
         {
-          user?.role === "admin" && <Link to="/admin">Admin</Link>
+          user?.role === "admin" && <Link to="/admin"><FaUserShiel/>Admin</Link>
         } 
         <Link to="/order">MyOrder</Link>
 
         {user?.token ? (
           <Link to="/profile"><FaUserCircle size={32} color="#555" /></Link>
         ) : (
-          <Link to="/login">Login</Link>
+          <Link to="/login"><FaSignInAlt/>Login</Link>
         )}
       </div>
     </div>
