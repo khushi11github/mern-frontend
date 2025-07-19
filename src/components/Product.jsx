@@ -9,16 +9,16 @@ export default function Product() {
   const [error, setError] = useState();
   const { user, cart, setCart } = useContext(AppContext);
 
-  const fetchProducts = async () => {
-    try {
-      const url = `${API_URL}/api/products/all`;
-      const result = await axios.get(url);
-      setProducts(result.data.products);
-    } catch (err) {
-      console.log(err);
-      setError("Something went wrong");
-    }
-  };
+ const fetchProducts = async () => {
+  try {
+    const url = `${API_URL}/api/products/display?page=1&limit=14`;
+    const result = await axios.get(url);
+    setProducts(result.data.products);
+  } catch (err) {
+    console.log(err);
+    setError("Something went wrong");
+  }
+};
 
   useEffect(() => {
     fetchProducts();
