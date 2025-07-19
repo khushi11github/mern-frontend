@@ -25,7 +25,7 @@ export default function Header() {
         <Link to="/order">MyOrder</Link>
 
         {user?.token ? (
-          <Link to="/profile">Profile</Link>
+          <Link to="/profile"><FaUserCircle size={32} color="#555" /></Link>
         ) : (
           <Link to="/login">Login</Link>
         )}
