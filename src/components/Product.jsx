@@ -33,7 +33,9 @@ export default function Product() {
   };
 
   return (
+    <> 
     <div className="products-container">
+      
       {products &&
         products.map((product) => (
           <div className="product-card" key={product._id}>
@@ -47,7 +49,9 @@ export default function Product() {
             <h4>₹{product.price}</h4>
             <button onClick={() => addToCart(product)}>Add to Cart</button>
           </div>
+        
         ))}
     </div>
+     </>
   );
 }

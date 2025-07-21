@@ -2,6 +2,7 @@ import React, { useEffect, useState, useContext } from "react";
 import axios from "axios";
 import { AppContext } from "../App";
 
+
 export default function Orders() {
   const [orders, setOrders] = useState([]);
   const [error, setError] = useState();
@@ -23,6 +24,7 @@ export default function Orders() {
       });
       setOrders(result.data.orders);
       setTotalPages(result.data.total);
+      
     } catch (err) {
       console.log(err);
       setError("Something went wrong");
@@ -49,7 +51,7 @@ export default function Orders() {
   };
 
   return (
-    <div>
+    <div className="ordersContainer">
       <h2>Order Management</h2>
 
       <div>
@@ -83,15 +85,16 @@ export default function Orders() {
             </li>
           ))
         ) : (
-          <li>No orders found.</li>
+          <li >No orders found.</li>
         )}
       </ul>
 
       <div>
-        <button disabled={page === 1} onClick={() => setPage(page - 1)}>
+        <button disabled={page === 1} onClick={() =>setPage(page-1) }   >   
           Previous
         </button>
-        Page {page} of {totalPages}
+    
+        Page {page} of {totalPages} page
         <button
           disabled={page === totalPages}
           onClick={() => setPage(page + 1)}
