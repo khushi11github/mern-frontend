@@ -4,7 +4,7 @@
   background-color: #f0eeee;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  gap: 100px;
+  gap: 99px;
   padding: 20px;
   justify-items: center;
 }
