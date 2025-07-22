@@ -2,7 +2,7 @@ import React from "react";
 import { useEffect, useState } from "react";
 import { useRef } from "react";
 import axios from "axios";
-import './Products.css'
+import './products.css'
 export default function Products() {
   const [products, setProducts] = useState([]);
   const [error, setError] = useState();
