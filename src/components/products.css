@@ -1,0 +1,119 @@
+/* Products.css */
+
+/* Base styling */
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #fff7f9;
+  color: #333;
+}
+
+h2 {
+  text-align: center;
+  color: #5c5470;
+  margin: 20px 0;
+}
+
+/* Form styling */
+form {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  justify-content: center;
+  margin: 20px auto;
+  max-width: 700px;
+}
+
+input[type="text"] {
+  padding: 10px 12px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  width: 100%;
+  max-width: 180px;
+  transition: border-color 0.3s;
+}
+
+input[type="text"]:focus {
+  border-color: #c8a2c8;
+  outline: none;
+}
+
+button {
+  padding: 10px 16px;
+  background-color: #c8a2c8; /* Lavender */
+  border: none;
+  color: white;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+button:hover {
+  background-color: #a675a1;
+}
+
+button:disabled {
+  background-color: #ddd;
+  cursor: not-allowed;
+}
+
+/* Table styling */
+table {
+  margin: 30px auto;
+  width: 90%;
+  border-collapse: collapse;
+  background-color: #fff;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+th, td {
+  padding: 12px 15px;
+  text-align: center;
+}
+
+thead {
+  background-color: #f7e9f7;
+  color: #5c5470;
+}
+
+tbody tr:nth-child(even) {
+  background-color: #fdf2f8;
+}
+
+img {
+  width: 80px;
+  height: auto;
+  border-radius: 6px;
+}
+
+/* Pagination buttons */
+div > button {
+  margin: 10px 5px;
+}
+
+/* Search bar styling */
+input[type="text"] + button {
+  background-color: #fadadd; /* Blush pink */
+  color: #333;
+}
+
+input[type="text"] + button:hover {
+  background-color: #f2b5d4;
+}
+
+/* Responsive tweaks */
+@media (max-width: 768px) {
+  form {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  input[type="text"] {
+    max-width: 100%;
+  }
+
+  table {
+    font-size: 14px;
+  }
+}

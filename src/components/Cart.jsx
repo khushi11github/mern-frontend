@@ -83,9 +83,13 @@ export default function Cart() {
           </div>
         )
     )}
-  <div className="order-summary">Order Value: ₹{orderValue}</div>
+  <div className="order-summary">
+    
+    
+    Order Value: ₹{orderValue}
+    </div>
   {user?.token ? (
-    orderValue > 0 ? (
+    orderValue >0 ? (
       <button className="order-btn" onClick={placeOrder}>
         Place Order
       </button>
@@ -99,7 +103,10 @@ export default function Cart() {
       Login to Order
     </button>
   )}
+  
 </div>
+
+
 
   );
 }

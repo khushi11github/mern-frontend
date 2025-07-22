@@ -1,6 +1,6 @@
 /* Header.css */
 .header {
-  background-color: #c5a4dd;
+  background-color: #5c535c;
   padding: 1rem 2rem;
   display: flex;
   align-items: center;
@@ -12,7 +12,7 @@
 
 .header h1 {
   font-size: 1.8rem;
-  color: #2c3e50;
+  color: #ffffff;
   margin: 0;
 }
 
@@ -22,10 +22,10 @@
   align-items: center;
 }
 
-.nav-links a {
+.nav-links a {                
   text-decoration: none;
   font-size: 1rem;
-  color: #34495e;
+  color: #ffffff;
   padding: 0.4rem 0.8rem;
   border-radius: 5px;
   transition: background-color 0.3s, color 0.3s;
@@ -33,5 +33,9 @@
 
 .nav-links a:hover {
   background-color: #3498db;
-  color: white;
+  color: rgb(231, 226, 226);
+}
+
+a>span{
+  display: none;
 }
